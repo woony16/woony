@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>SeoJieun profile page</title>
+  <meta name="description" content="">
+  <meta name="author" content="Jieun">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+  <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/profile/css/reset.css">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+  <link rel="stylesheet" href="/profile/css/style.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script> 
+  <script href="/profile/js/scroll.js"> </script>
+	
+	
+	<script>
+		var $popupClose
+		$(document).ready(function(){
+			$popupClose=$("#popup_close");
+			$popupClose.bind("click",onpopupClose);			
+		})
+		function onpopupClose(){			
+			
+			$("#popup").animate({"height":0},300,"swing",function(){
+				$("#popup").hide();
+			})
+			
+		}		
+	</script>
+	
+	
+	
+  	<script>
+  	var currentMenuNum=0
+  	var $menu;
+  	
+	$(window).load(function(){
+		$("#viewmore_wrok").css("height",$(window).innerHeight())
+		
+		$(window).bind("scroll",onScroll)		
+		$menu=$("#menu li p.menu_one");
+		//$menuP$("#menu li p.menu_one");
+		//$menu.eq(0).addClass("selected");
+		
+		
+		
+		
+		
+	})
+	
+	$(window).resize(function(){
+		$("#viewmore_wrok").css("height",$(window).innerHeight());
+		
+		
+	})
+	
+	
+	function onScroll(){
+		
+		var scrollTop=$(document).scrollTop();
+	
+	//alert(scrollTop)
+	
+		if(scrollTop==0){
+			currentMenuNum=0		
+		}else if(scrollTop>=500 && scrollTop<1000){
+			
+			$(".skill70").addClass("selected");
+			$(".skill80").addClass("selected");
+			$(".skill90").addClass("selected");
+			
+		}else if(scrollTop>=2300 && scrollTop<2700){			
+			currentMenuNum=2
+			$("#viewmore_wrok").animate({"background-color":"black"},1000,"easeOutCubic")
+		}else if(scrollTop>=3300 && scrollTop<4000){
+			$("#project_information_bar").animate({"width":100+"%"},500,"swing",function(){				
+			$("#project_title").animate({"opacity":1},500,"swing")
+			$("#project_txt").animate({"opacity":1},500,"swing")})				
+		}else if(scrollTop>=5900 && scrollTop<6400){
+			$("#yellowgreenOne").addClass("selected")
+			$("#whiteOne").addClass("selected")
+			$("#orangeOne").addClass("selected")
+		}else if(scrollTop>=7000 && scrollTop<7400){
+			currentMenuNum=4
+			$("#contact_txt").animate({"top":-150},700,"swing")
+		}	
+		
+		
+		
+		
+		
+		
+			
+		$menu.removeClass("selected");
+		$menu.eq(currentMenuNum).addClass("selected");
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	}
+  		
+  	</script>
+  	
+  	<script>
+  		
+  		var introText=["웹","디","자","이","너","와"," ","개","발","자","를"," ]
+  		var timer;
+  		var count=0
+  		
+  		$(document).ready(function(){
+  			
+  			
+  			timer=setInterval(writeText,2000)
+  			
+  			
+  		})
+  		
+  		
+  		function writeText(){
+  			
+  			
+  			
+  			introText[count].appendTo($("test"))
+  			
+  			
+  			count=count+1
+  			
+  			if(count>=28){
+  				
+  				celarInterval(timer)
+  				
+  			}
+  		}
+  		
+  		
+  		
+  	</script>
+	
+</head>
+
+<body>
+  <!--스킵메뉴-->
+	<ul class="skipmenu">
+		<li><a href="#">탑메뉴</a></li>		
+		<li><a href="#">하단영역</a></li>	
+	</ul>
+<!--스킵메뉴 끝-->
+	<div class="header_wrap">
+		<header>
+				<nav id="mainmenu">
+					<h1 class="hidden">포트폴리오 목차</h1>
+					<ul id="menu">
+						<li><a href="#">
+							<p class="menu_txt">Intro</p>
+							<p class="menu_one"></p></a>
+						</li>
+						<li>
+							<a href="#aboutme"><p class="menu_txt">About me</p>
+							<p class="menu_one"></p></a>
+						</li>
+						<li>
+							<a href="#uiux"><p class="menu_txt">UIUX</p>
+							<p class="menu_one"></p>
+							</a>
+						</li>
+						<li>
+							<a href="#viewmore_wrok"><p class="menu_txt">Portfolio</p>
+							<p class="menu_one"></p></a>
+						</li>
+						<li>
+							<a href="#contact"><p class="menu_txt">Contact</p>
+							<p class="menu_one"></p></a>
+						</li>
+					</ul>	
+				</nav>
+		</header>
+	</div>
+	<div id="popup">
+		<p id="popup_close"><a href="#;">닫기</a></p>
+		<p id="popup_title">NOTICE</p>
+		<p id="popup_txt">
+			 이 사이트는 포트폴리오를 목적으로 제작된 사이트입니다.
+			사이트 내 이미지의 저작권은 모두 다른 곳에 있으므로 개인 및
+			<span>상업적인 목적으로 사용 시에 법적인 문제가 발생할 수 있습니다.</span>
+		</p>
+		<p id="popup_email">관련문의 : sje940106@naver.com</p>
+	</div>
+
+	<div id="content_wrap">
+		<div id="aboutme">
+			<div id="aboutme_inner">
+				
+				<!--<p>Become a</p><p>Web Publisher</p>-->
+				<ul id="me_images">
+					<li><img src="/profile/images/aboutme_me_00.jpg" alt=""></li>
+					<li><img src="/profile/images/aboutme_me_01.jpg" alt=""></li>
+				</ul>
+				<p id="about_title_text"><img src="/profile/images/aboutme_title.png" alt="웹퍼블리셔가 되고싶습니다"></p>
+				<div id="about_text">
+					<p>
+						 쇼핑몰에서 웹디자이너로 일하면서 항상 막히는 부분은 코딩이었습니다. 짧게 배웠던 코딩은 오히려 답답함을 느끼게 하였습니다. 
+						 짧은 지식으로는 대강 알아볼 수 있어도 수정하기에는 엄두가 안 날 때가 많았습니다. 다른 사이트를 보면 동적인 효과들이 멋있지만 
+						 어떻게 만들까 하는 막연한 심정이었습니다. 그러던 중 웹 퍼블리셔 과정을 들을 수 있어 설레는 마음으로 수업을 들었습니다. 처음에는 
+						 버벅거리는 순간이 많았지만 하나하나 잘못된 점을 찾아 수정하는 것에 즐거움을 느꼈습니다. 
+
+					</p>
+				</div>
+				
+				
+				
+			</div>			
+		</div>
+		<div id="skill">
+			<div id="skill_inner">
+				<p id="skill_title">SKILL</p>
+			<ul id="skill_list">
+					<li>
+						<p class="skill_icon"><img  src="/profile/images/skill_icon00.jpg" alt="html css"></p>
+						<p class="skill_title">HTML / CSS</p>
+						<div class="skill90 skill_color00"><p>90<span>%</span></p></div>
+					</li>
+					<li>
+						<p class="skill_icon"><img  src="/profile/images/skill_icon01.jpg" alt="html css"></p>
+						<p class="skill_title">HTML / CSS</p>
+						<div class="skill80 skill_color01"><p>83<span>%</span></p></div>
+					</li>
+					<li>
+						<p class="skill_icon"><img  src="/profile/images/skill_icon02.jpg" alt="html css"></p>
+						<p class="skill_title">HTML / CSS</p>
+						<div class="skill70 skill_color02"><p>78<span>%</span></p></div>
+					</li>
+					<li>
+						<p class="skill_icon"><img  src="/profile/images/skill_icon03.jpg" alt="html css"></p>
+						<p class="skill_title">HTML / CSS</p>
+						<div class="skill80 skill_color03"><p>80<span>%</span></p></div>
+					</li>
+					<li>
+						<p class="skill_icon"><img  src="/profile/images/skill_icon04.jpg" alt="html css"></p>
+						<p class="skill_title">HTML / CSS</p>
+						<div class="skill70 skill_color04"><p>75<span>%</span></p></div>
+					</li>
+					<li>
+						<a href="#;">
+							<p class="skill_icon"><img  src="/profile/images/skill_icon05.jpg" alt="html css"></p>
+							<p class="skill_title">HTML / CSS</p>
+							<div class="skill80 skill_color05"><p>86<span>%</span></p></div>
+						</a>
+					</li>
+				</ul>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<!--	<span id="aboutSubtitle">Skillset</span>
+			<ul id="skillSet">
+				<li data-count="51">
+					<div class="second circle">
+						<strong></strong>
+						<span>UX/UI Design</span>
+					</div>
+				</li>
+				<li data-count="52">
+					<div class="second circle">
+						<strong></strong>
+						<span>Prototype</span>
+					</div>
+				</li>
+				<li data-count="83">
+					<div class="second circle">
+						<strong></strong>
+						<span>Sketch</span>
+					</div>
+				</li>
+				<li data-count="91">
+					<div class="second circle">
+						<strong></strong>
+						<span>HTML / CSS</span>
+					</div>
+				</li>
+				<li data-count="76">
+					<div class="second circle">
+						<strong></strong>
+						<span>jQuery</span>
+					</div>
+				</li>
+				<li data-count="99">
+					<div class="second circle">
+						<strong></strong>
+						<span>Photoshop</span>
+					</div>
+				</li>
+				<li data-count="99">
+					<div class="second circle">
+						<strong></strong>
+						<span>illustrator</span>
+					</div>
+				</li>
+				<li data-count="55">
+					<div class="second circle">
+						<strong></strong>
+						<span>Flash</span>
+					</div>
+				</li>
+				<li data-count="82">
+					<div class="second circle">
+						<strong></strong>
+						<span>Aptana Studio</span>
+					</div>
+				</li>
+				<li data-count="60">
+					<div class="second circle">
+						<strong></strong>
+						<span>Photography</span>
+					</div>
+				</li>
+			</ul>	-->
+				
+				
+				
+				
+			</div>
+		</div>
+		<div id="uiux">
+			<div id="uiux_inner">
+				<div id="left_uiux">
+					<p><img src="/profile/images/uiux_img00.jpg" alt="패트리샤무어"></p>
+				</div>
+				<div id="right_uiux">
+					<p><img src="/profile/images/uiux_img01.jpg" alt=""></p>
+					<p id="uiux_title">UIUX</p>
+					<p id="uiux_title_text">User Interface &#38; User Experience</p>
+				</div>
+				<p id="uiux_maintitle">&#34;경험보다 좋은 디자인은 없다&#46;&#34;</p>
+				<p id="uiuix_text"> 
+					노인을 위한 디자인은 없다&#46; 디자이너인 패트리샤 무어가 미팅 중에 들은 꾸지람입니다&#46; 패트리샤 무어는 3년간 노인분장을 하고 평상시같은 일상을 이어나갑니다&#46; 
+					10분밖에 걸리지않는 거리는 1시간이상이 걸리게됩니다&#46; UIUX는 사람을 고려한 디자인을 해야합니다&#46;
+				</p>
+			</div>			
+		</div>
+		
+		
+		
+		
+		
+		<div id="viewmore_wrok">
+			<p id="viewmore_wrok_title">View more wrok</p>
+			<p id="viewwork_arrow"><a href="#"><img src="/profile/images/viewwork_arrow.png" alt="아래로가기"></a></p>
+		</div>
+		<div id="project_information_wrap">
+			<div id="project_information">
+				<p id="mobile_travelmate"><img src="/profile/images/mobile_travelmate.png" alt="같이가요 모바일"></p>
+				<div id="titleNum00" class="title_area">
+					<p class="titleNum">00</p>
+					<p class="titleText">Preoject Information</p>
+					<p class="name">Name&#46;</p><p class="substance">같이가요</p>
+					<p class="name">Date&#46;</p><p class="substance">2018&#46;12~19&#46;03</p>
+					<p class="name">Output&#46;</p><p class="substance">Web &#47; Mobile</p>
+				</div>	
+			</div>
+			<div id="project_information_bar">
+				<p id="project_title">OVER VIEW</p>
+				<p id="project_txt">
+					혼여족을 위한 사이트입니다&#46;<br>
+					목적지를 매치해 글을 작성, 동행을 찾을 수 있습니다&#46;
+				</p>
+			</div>
+			
+			
+		</div>
+		
+		<div id="travelmateIdentity">
+			<h3 id="travelmateIdentity_title">TRAVELMATE IDENTITY</h3>
+			<ul id="logo_list">
+				<li><p>같이가요</p></li>
+				<li><p>ㄱㅇㄱㅇ</p></li>
+				<li><p><img src="/profile/images/logo03.png" alt=""></p></li>
+				<li><p><img src="/profile/images/logo04.png" alt=""></p></li>
+			</ul>
+			<p id="travelmateIdentity_bottombg"><img src="/profile/images/travelmateIdentity_bottombg.jpg" alt=""></p>
+		</div>
+		<div id="proposal">
+			<p id="proposal_img"><img src="/profile/images/why.jpg" alt=""></p>
+			<ul class="proposal_list">
+				<li class="proposal_title">WHO</li>
+				<li class="proposal_txt">혼행을 하는 20대 초반 여자의 비율은 낮지만, 남성에 비교 했을 때 눈에 띄는 상승 비율을 보인다&#46;</li>
+				<li class="proposal_txt">상대적으로 여행지에서 비용이나 편리성을 목적으로 동행을 구하는 사람이 증가했다&#46;</li>
+				<li class="proposal_txt">여성의 입장에 쓴 후기를 보면서 위험을 예방 할 수 있다, 남자에게는 안전 할 수 있어도 여자 혼자라면 다를 수 있다&#46;</li>				
+			</ul>
+			<ul class="proposal_list" id="what">
+				<li class="proposal_title">WHAT</li>
+				<li class="proposal_txt"> 나라 별 도시 별 카테고리를 생성해  목적지를 정하고 관광지에 선택에 따라 사용자가 매치 됩니다. 관광지 별 운영시간과 현지주소,번호를 볼 수 있습니다&#46; 우범지역정보를 제공해 숙소를 결정 할 때 도움을 주는 가이드 라인이 될 것입니다&#46; </li>				
+			</ul>
+			<ul class="proposal_list" id="why">
+				<li class="proposal_title">WHY</li>
+				<li class="proposal_txt"> 20~40대에 혼여 여성 사용자들을 위한  목적지공유와 함께 여행 정보를 나누어  비용절감과 동시에 여성들에 대한 여행의 편의성과 안정성을 확보&#46;</li>				
+			</ul>
+		</div>
+		<div id="wire_prame">
+			<div id="wire_prame_inner">
+			<div id="wire_prame_title">	
+				<p class="titleNum">01</p>
+				<p class="titleText">스토리보드 및 와이어프레임</p>
+			</div>	
+			<div id="wire_prame_txt">
+				<p>
+					 디자인을 하기 전 스토리보드를 제작하고 사이트의 타겟을 설정하고 사이트만의 컨텐츠를 구상해보는 새로운 작업이였습니다&#46; 카카오의 오븐툴을 활용해서 와이어 프레임 및 프로토 타입을 제작했습니다&#46;
+					프로토 타입을 제작 후 페르소나를 만들어 웹의 사용성을 테스트해보는 의미깊은 시간이였습니다&#46; 처음으로 프르토타입을 제작해 리뷰를 다른 클래스메이트와 하면서 UIUX에 대해서도 다시 한번 생각하게 되는 시간이였습니다&#46;
+					
+				</p>
+			</div>
+			<ul id="wire_prame_list_num">
+				<li class="clicked"><p><a href="#;">1</a></p></li>
+				<li><p><a href="#;">2</a></p></li>
+				<li><p><a href="#;">3</a></p></li>
+			</ul>
+			<ul id="wire_prame_list">
+				<li><img src="/profile/images/wire_prame_img00.jpg" alt=""></li>
+				<li><img src="/profile/images/wire_prame_img01.jpg" alt=""></li>
+				<li><img src="/profile/images/wire_prame_img02.jpg" alt=""></li>
+			</ul>
+			
+			<script>
+				var $wireprameList;
+			 	var $wireprameLi;
+			 	var wireprameImgNum;
+			 	var $wireprameDot;
+			 	var wireprameCount;
+			 	var wireprameLiNum;
+			 	var wireprameclickNum=0;	
+			 	
+		 	$(document).ready(function(){ 		
+		 		$imgLi=$("#wire_prame_list>li"); 		 //이미지	
+		 		$wireprameDot=$("#wire_prame_list_num>li");  	 //넘버	
+		 		$imgLi.hide();
+		 		$imgLi.eq(0).show();		
+		 		
+		 		wireprameLiNum=$("#wire_prame_list img").size(); 
+		 		//alert(wireprameLiNum)
+		 		$wireprameDot.bind("click",onDotClick)
+		 		$("#wire_prame_list").bind("mouseover",onDotStop)
+		 		$("#wire_prame_list").bind("mouseout",onDotStart)
+		 		onKeyStart() 		
+		 	}) 	
+		 	function onImgMove(selectDot){ 		
+				$wireprameLi.hide()
+		 		$wireprameLi.eq(keyclickNum).show() 		
+				}
+			function onNumMove(selectDot){		
+				$wireprameDot.removeClass("clicked")
+				$wireprameDot.eq(wireprameClickNum).addClass("clicked")
+				
+			}
+			function onDotClick(selectDot){	 		
+			 	
+			 	alert("dd")
+			 	wireprameClickNum=$wireprameDot.index($(this));
+			 	
+			 	onKeyMove(keyclickNum);
+			 	onDotMove(keyclickNum);
+			 	onKeyStop() 	
+		 	}
+			function onImgCountDot(){		
+				wireprameClickNum=wireprameClickNum+1;
+				if(wireprameClickNum>=wireprameLiNum){
+					wireprameClickNum=0;
+				}
+				onImgMove(wireprameClickNum)
+				onNumMove(wireprameClickNum)
+				
+			}
+			function onDotStart(){
+				DotCount=setInterval(onImgCountDot,3000)
+			}
+			function onDotStop(){
+				clearInterval(DotCount)}
+
+
+
+			</script>
+			
+			
+			
+			
+			
+			
+			
+			
+				
+			</div><!--wire_prame_inner-->
+		</div>
+		
+		
+		<div id="color">
+			<!--<p id="travelmate_pc"><img src="/profile/images/travelmate_pc.jpg" alt=""></p>-->
+			<div id="color_inner">
+				<div class="title_color">
+					<p class="titleNum">02</p>
+					<p class="titleText">리드미컬 컬러</p>
+				</div>	
+
+				<div id="orangeOne"><p>#fc651e</p></div>
+				<div id="whiteOne"><p>#ffffff</p></div>
+				<div id="yellowgreenOne"><p>#fc651e</p></div>
+				<p id="about_color_text">
+					 여행의 설레임을 표현하기 위해 &#39;설레임&#39;과 &#39;명랑&#39;을 상징하는 오렌지 색상을 강조색으로 사용하였습니다&#46; 보조색으로는 톤인톤 배색으로 경쾌하고 트렌디하게 연출 했습니다&#46; 무채색인 흰색을 사용하여 밝고 깨끗한 느낌을 주기 위해 주조색으로 사용하였습니다&#46;
+				</p>
+			</div>
+		</div>
+		<div id="coding">
+			<div id="coding_title"><p>CODING</p></div>
+			<div id="code_text">
+				<p>APTANA STUDIO에서 PHP Project를 연결해 하드 코딩하였습니다&#46; HTML5와 CSS를 기반으로 레이아웃을 잡고 Media screen을 사용하여 칼럼드랍 방식으로 제작하였습니다&#46;
+					먼저 PC 사이즈 메뉴는 첫번째부터 세번째까지 서브메뉴가 없고 네번째부터 여섯번째 메뉴는 서브메뉴가 있어서 IF함수를 사용하여 코딩하였습니다&#46;
+					제일 어려웠던부분은 반응형으로 슬라이드를 작업하는것이였는데 resize를 생각하지 못하고 여러번 실수했던것이 생각납니다&#46;
+				</p>
+			</div>
+			
+		</div>
+		<div id="mywork">
+			<div id="travelmate" class="account"><img src="/profile/images/travelmate.jpg" alt="">
+				<div class="work_account">
+					같이가요
+					Type PC <br>Design 100% Coding 100% 
+					<p class="work_account_text">
+						기획부터 디자인, 하드코딩하여 작업했습니다.
+					</p>	
+				</div>
+			</div>
+			<div id="travelmate_m" class="account"><img src="/profile/images/travelmate_m.jpg" alt="">
+				<div class="work_account">
+					같이가요 
+					Type Mobile <br>Design 100% Coding 100% 
+					<p class="work_account_text">
+						jQuery Mobile framework사용하여 인터렉션을 추가해 하드코딩하였습니다.
+						</p>
+				</div>
+			</div>
+			<div id="guksim" class="account"><img src="/profile/images/guksim.jpg" alt="">
+				<div class="work_account">
+					국심
+					Type pc <br>Design 0% Coding 100% 
+					<p class="work_account_text">
+						반응형으로 작업하기 위해 jQuery로 레이아웃을 잡아주었습니다.
+					</p>	
+				</div>
+			</div>
+		</div>
+		<div id="contact">
+			<div id="contact_inner">
+				<p id="contact_title"><img src="/profile/images/contact_title.png" alt="contact"></p>
+				<div id="contact_content">
+					<p id="contact_back"><img src="/profile/images/contact_back.png" alt=""></p>
+					<p id="contact_txt">내용ㅇ내용</p>
+					<p id="contact_front"><img src="/profile/images/contact_front.png" alt=""></p>
+				</div><!--참고https://collegeinfogeek.com/personal-website/-->
+				
+			</div>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+	</div><!--content_wrap-->
+		
+	  
+
+	
+
+		
+
+		
+		
+		
+		
+		
+	
+		
+		
+
+		
+		
+ 	
+
+
+  
+  
+  
+  
+  
+</body>
+</html>

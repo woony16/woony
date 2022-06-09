@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>SeoJieun profile page</title>
+  <meta name="description" content="">
+  <meta name="author" content="Jieun">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+  <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/profile/css/reset.css">
+	<link rel="stylesheet" href="/profile/css/style.css">
+	<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script> 
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet"> 
+  	<script>
+  		
+  		
+  		/*var $contentWrap  		
+  		$(window).resize(function(){  			
+  			$contentWrap.css("height",$(window).innerHeight()) 			
+  			
+  		})
+  		$(document).ready(function(){
+  			$contentWrap=$("#content_wrap");			
+  			
+  		})*/
+  		
+  	</script>
+	<script>
+		var $introArrow  		
+  		
+  		
+  		$(document).ready(function(){
+  			$introArrow=$("#intro_arrow");
+  			$introArrow.animate({"margin-top":30},300,"swing")
+  					
+  			
+  		})
+  		
+  		
+  		
+  		
+	</script>
+  
+	  <script>
+	  /*스크롤*/
+	
+$(document).ready(function(){ 
+  $('div.bgParallax').each(function(){ 
+    var $obj = $(this); 
+  });	 
+});
+
+$('div.bgParallax').each(function(){ 
+  var $obj = $(this); 
+  $(window).scroll(function() { 
+    var yPos = -($(window).scrollTop() / $obj.data('speed')); 
+    var bgpos = '50% '+ yPos + 'px'; 
+    $obj.css('background-position', bgpos ); 
+  }); 
+});
+
+var section = 1, scrolling = false;
+
+function scrolled(){
+  scrolling = false;
+}
+
+function scrolldown(t) {
+  if(!scrolling) $('html, body').animate({ scrollTop: $("#par"+t).offset().top}, 500, scrolled);
+  scrolling = true;
+};
+
+//prevent scrolling
+$('html').on({'mousewheel': function(e) {
+  if (e.target.id == 'el') return;
+  e.preventDefault();
+}});
+
+function displaywheel(e){
+  if(scrolling) return;
+  
+  //get event, 'mouse up' if 120, 'mouse down' if -120
+  var evt=window.event || e,
+      delta=evt.detail? evt.detail*(-120) : evt.wheelDelta;
+
+  if(delta == -120){
+    section++;
+    if(section > 3) section = 3;
+  }else{
+    section--;
+    if(section < 1) section = 1;
+  }
+  
+  scrolldown(section);
+}
+
+var mousewheelevt=(/Firefox/i.test(navigator.userAgent))? "DOMMouseScroll" : "mousewheel" 
+
+if (document.attachEvent) //if IE (and Opera depending on user setting)
+  document.attachEvent("on"+mousewheelevt, displaywheel)
+else if (document.addEventListener) //WC3 browsers
+  document.addEventListener(mousewheelevt, displaywheel, false)
+    
+setTimeout(function(){
+  scrolldown(2);
+}, 2000);
+	</script>
+  
+  
+  
+  
+  
+  
+</head>
+
+<body>
+  <!--스킵메뉴-->
+	<ul class="skipmenu">
+		<li><a href="#">탑메뉴</a></li>		
+		<li><a href="#">하단영역</a></li>	
+	</ul>
+<!--스킵메뉴 끝-->
+	<div class="header_wrap">
+		
+		<header>
+				
+			<div id="mainmenu">
+				<ul class="mainmenu_list">
+					<li><a href="#">PROFILE</a>
+						<ul class="submenu_list">
+							<li><a href="#">Brand Identity</a></li>
+						</ul>	
+					</li>					
+					<li><a href="#">UIUX</a></li>
+					<li><a href="#">WORK TABLE</a>
+						<ul class="submenu_list">
+							<li><a href="#">Brand Identity</a></li>
+							<li><a href="#">Poroject Planing</a></li>
+							<li><a href="#">Design</a></li>
+							<li><a href="#">Coding</a></li>							
+						</ul>
+					</li>
+					<li><a href="#">CONTACT</a></li>				
+				</ul>
+			</div>
+		</header>
+	</div>
+	
+			<!--<div id="content_wrap">
+			  <div class="blackbg"> </div>
+			  <div class="intro">
+				<p id="intro_title">Let me Introducing Myself</p>
+				<p id="intro_bar"> </p>
+				<p id="intro_txt">스크롤을 내려보세요</p>
+				<p id="intro_arrow"><img src="/profile/images/intro_arrow.png" alt=""></p>
+			 </div>	
+	  </div>-->
+
+	<div id="container">
+      <div id="par1" class="bgParallax" data-speed="5"> 
+        <article> 
+          	  <!--<div class="blackbg"> </div>-->
+			  <div class="content_wrap">
+				<div id="intro">
+					<p id="intro_title">Let me Introducing Myself</p>
+					<p id="intro_bar"> </p>
+					<p id="intro_txt">스크롤을 내려보세요</p>
+					<p id="intro_arrow"><img src="/profile/images/intro_arrow.png" alt=""></p>
+				</div>
+			 </div>	
+        </article> 
+      </div> 
+      <div id="par2" class="bgParallax" data-speed="4"> 
+        <article> 
+      		<!--<div class="blackbg"> </div>-->
+			  <div class="content_wrap">
+				
+
+			 </div>	
+       
+        </article> 
+      </div> 
+      <div id="par3" class="bgParallax" data-speed="3"> 
+        <article> 
+			  <div class="content_wrap">
+				
+
+			 </div>	 
+     
+     
+     
+        </article> 
+      </div> 
+  </div><!--container-->
+ 	
+
+
+  
+  
+  
+  
+  
+</body>
+</html>

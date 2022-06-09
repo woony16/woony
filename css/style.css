@@ -1,0 +1,696 @@
+a{
+	text-decoration:none; 
+}
+.hidden{
+	width:1px; height:1px; font-size:0px; line-height:0px;
+	position:absolute;
+}
+
+
+/*스킵메뉴시작*/
+ul.skipmenu a{
+	width:1px; height:1px; position:absolute;
+	font-size:0px; line-height:0px;
+}
+ul.skipmenu a:focus{
+	width:100%; height:40px; background:black; color:white;
+	font:normal 0.750em/40px "Nanum+Gothic"; text-align:center;
+	text-decoration:none;
+}
+/*스킵메뉴끝*/
+/*상단영역시작*/
+body{
+	width:100%;  position:relative; left:0px; top:0px;
+}
+div.header_wrap{
+	width:100%; float:left; position:relative; left:0px; top:0px; 
+}
+header{
+	width:100%;  position:relative; left:0px; top:0px; z-index:1;
+}
+ul#menu{
+	width:150px; position:fixed; right:22px; top:33%;
+}
+ul#menu>li{
+	width:150px; float:left; margin-bottom:15px;  
+	position:relative; left:0px; top:0px; 
+}
+p.menu_one{
+	width:12px; height:12px; background:#c4e413; border-radius:6px; float:right;
+}
+p.menu_one.selected{
+	width:18px; background:#fc651e;
+	transform:rotate(30deg);
+	}
+p.menu_txt{
+	width:100%; text-align:right; line-height:19px; font:normal 13px "vernada";
+	 position:absolute; right:0px; top:0px; color:#636363; line-height:12px; letter-spacing:2px;
+	 margin-right:28px; 
+}
+
+
+
+/*컨텐츠영역*/
+div#popup{
+	width:500px; height:250px; position:fixed; left:150px; top:150px; background:rgba(254,251,246,0.9);
+	border-left:solid 8px #fc651e; z-index:1;  box-sizing:border-box; 
+}
+p#popup_close{
+	position:absolute; right:10px; top:10px;
+}
+p#popup_close>a{
+	font:normal 0.750em "Nanum+Gothic"; color:#9e6b0f;
+}
+p#popup_title{
+	font:normal 1.250em "Nanum+Gothic"; color:white; background:#fc651e; border-radius:10px; width:190px; height:54px; position:absolute; left:-8px; top:-39px; line-height:54px; text-align:center;
+}
+p#popup_txt{
+	width:80%; text-align:justify; height:150px; font:normal 1.000em "Nanum+Gothic"; margin:65px auto;
+}
+p#popup_txt span{
+	text-decoration:underline;
+}
+p#popup_email{
+	color:#fc651e; font:normal 0.750em "Nanum+Gothic"; position:absolute; left:50px; bottom:30px;
+}
+
+
+div#aboutme{
+	width:100%; min-height:1000px; position:relative; left:0px; top:0px; float:left; background:url("/profile/images/aboutme_bg.png") no-repeat center; background-size:cover;
+}
+
+div#aboutme_inner{
+	width:1200px; height:500px; margin:0px auto; margin-top:50px; /*border-left:solid 1px #dbdbdb; border-top:solid 1px #dbdbdb; box-sizing:border-box;*/
+	position:relative; left:0px; top:0px;
+}
+div#about_title{
+	/*font:bold 6.250em "Permanent Marker"; */
+	
+}
+p#about_title_text{
+	position:absolute; left:0px; top:150px;
+}
+p#about_title_text>img{
+	z-index:1; 
+}
+ul#me_images{
+	width:510px; height:180px; position:absolute; right:-120px; top:150px; float:right; 
+}
+ul#me_images>li{
+	width:180px; height:180px; float:left;  position:relative; left:0px; top:0px; overflow:hidden; border-radius:90px; 
+}
+
+ul#me_images>li:first-child{
+	margin-right:10px;
+}
+ul#me_images>li:hover:after{
+	content:"";
+	background:rgba(238,24,200,0.2);
+	position:absolute; left:0px; top:0px;
+	width:100%; height:100%;
+}
+div#about_text{
+	width:85%; height:180px; margin:0px auto; border-top:solid 6px #318499; padding:40px; box-sizing:border-box;
+	background:rgba(255,255,255,0.7); position:relative; left:0px; top:400px;
+}
+div#about_text>p{
+	color:#252525; font:normal 1.000em/1.125em "Nanum+Gothic"; text-align:justify; 
+}
+div#skill{
+	width:100%; min-height:800px; position:relative; left:0px; top:0px; float:left;
+
+	
+}
+div#skill_inner{
+	width:1200px; height:700px; margin:0px auto; position:relative; left:0px; top:0px;
+	 background:rgba(255,255,255,0.8); margin-top:50px; /*box-shadow:0px 0px 10px #52383d;*/ border:solid 5px #white;
+}
+div#uiux{
+	width:100%; min-height:600px; position:relative; left:0px; top:0px; float:left; /*background:url("/profile/images/uiux_bg.jpg") no-repeat center;
+	background-size:cover;*/ border-top:solid 5px #f9a984;
+}
+div#uiux_inner{
+	width:1200px; height:800px; margin:0px auto; position:relative; left:0px; top:0px;
+	  background:rgba(255,255,255,0.8); margin-top:50px; /*box-shadow:0px 0px 10px #52383d;*/ border:solid 5px #white;
+}
+ul#skill_list{
+	width:900px; height:500px; position:relative; left:0px; top:0px; margin:0px auto;
+}
+ul#skill_list>li{
+	width:33.33%; height:250px; float:left; position:relative; left:0px; top:0px; text-align:center;
+}
+ul#skill_list>li:first-child:hover:after{
+	content:"기본적인 레이아웃 및 psd to html";
+	position:absolute; left:160px; top:-20px; background:rgba(237,237,237,0.5); border-radius:5px 0px 30px 5px; z-index:10;
+	width:300px; height:30px; text-align:center; font:normal 0.750em "Nanum+Gothic"; padding-top:5px; box-sizing:border-box;
+}
+ul#skill_list>li:nth-child(2):hover:after{
+	content:"UIUX에 대한 이해와  사람을 생각한 디자인";
+	position:absolute; left:170px; top:-20px; background:rgba(237,237,237,0.5); border-radius:5px 0px 30px 5px; z-index:10;
+	width:300px; height:30px; text-align:center; font:normal 0.750em "Nanum+Gothic"; padding-top:5px; box-sizing:border-box;
+}
+ul#skill_list>li:nth-child(3):hover:after{
+	content:"HTML/CSS 및 Java script/ jQuery 하드코딩";
+	position:absolute; left:170px; top:-20px; background:rgba(237,237,237,0.5); border-radius:5px 0px 30px 5px; z-index:10;
+	width:300px; height:30px; text-align:center; font:normal 0.750em "Nanum+Gothic"; padding-top:5px; box-sizing:border-box;
+}
+ul#skill_list>li:nth-child(4):hover:after{
+	content:"사용자의 디바이스에 따라 미디어 쿼리 구현";
+	position:absolute; left:170px; top:-20px; background:rgba(237,237,237,0.5); border-radius:5px 0px 30px 5px; z-index:10;
+	width:300px; height:30px; text-align:center; font:normal 0.750em "Nanum+Gothic"; padding-top:5px; box-sizing:border-box;
+}
+ul#skill_list>li:nth-child(5):hover:after{
+	content:"웹표준 웹접근성 지침에 적합한 퍼블리싱";
+	position:absolute; left:170px; top:-20px; background:rgba(237,237,237,0.5); border-radius:5px 0px 30px 5px; z-index:10;
+	width:300px; height:30px; text-align:center; font:normal 0.750em "Nanum+Gothic"; padding-top:5px; box-sizing:border-box;
+}
+ul#skill_list>li:nth-child(6):hover:after{
+	content:"프로토타입 기반으로 레이아웃 구성 사진 리터칭";
+	position:absolute; left:170px; top:-20px; background:rgba(237,237,237,0.5); border-radius:5px 0px 30px 5px; z-index:10;
+	width:300px; height:30px; text-align:center; font:normal 0.750em "Nanum+Gothic"; padding-top:5px; box-sizing:border-box;
+}
+div.skill90{
+	width:160px; height:160px; position:absolute; left:-20px; bottom:90px; border-radius:80px; 
+	transform:scale(0,0); transition: all ease 1.8s;
+}
+div.skill90.selected{
+	transform:scale(1.2);
+}
+div.skill90>p{
+	font:bold 4.375em "Nanum+Gothic"; line-height:160px;  color:white;
+}
+div.skill90>p>span{
+	font:bold 30px "Nanum+Gothic"; line-height:160px;
+}
+div.skill80{
+	width:144px; height:144px; position:absolute; left:0px; bottom:90px; border-radius:72px;
+	transform:scale(0,0); transition: all linear 1.2s;
+}
+div.skill80.selected{
+	transform:scale(1.2);
+}	
+div.skill80>p{
+	font:bold 4.375em "Nanum+Gothic"; line-height:144px;  color:white;
+}
+div.skill80>p>span{
+	font:bold 30px "Nanum+Gothic"; line-height:144px;
+}
+div.skill70{
+	width:130px; height:130px; position:absolute; left:10px; bottom:90px; border-radius:65px; transform:scale(0,0); transition: all ease 1s;
+}
+div.skill70.selected{
+	transform:scale(1.2);
+}
+div.skill70>p{
+	font:bold 4.375em "Nanum+Gothic"; line-height:130px;  color:white;
+}
+div.skill70>p>span{
+	font:bold 30px "Nanum+Gothic"; line-height:130px;
+}
+div.skill_color00{
+	background:rgba(19,111,221,0.8);
+	/*border:solid 5px rgba(19,111,221,0.8); box-sizing:border-box;*/
+}
+div.skill_color01{
+	background:rgba(195,42,42,0.8);
+}
+div.skill_color02{
+	background:rgba(224,159,89,0.8);
+}
+div.skill_color03{
+	background:rgba(231,163,112,0.8);
+}
+div.skill_color04{
+	background:rgba(180,71,21,0.8);
+}
+div.skill_color05{
+	background:rgba(147,173,2,0.8);
+}
+
+
+
+
+
+
+
+
+
+
+p.skill_title{
+	font:bold 1.000em "Nanum+Gothic"; color:#252525; text-align:center; margin-top:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*p#uiux_title{
+	font:normal 4.375em "Patua One"; color:gray; text-align:center; letter-spacing:10px;
+}*/
+div#left_uiux{
+	width:45%; height:500px; float:left; 
+}
+div#right_uiux{
+	width:55%; height:500px; float:left; 
+}
+p#uiux_title{
+	font:bold 5.000em "Nanum+Gothic"; color:#05383b; text-indent:50px;
+}
+p#uiux_title_text{
+	font:normal 0.750em/1.000em "Nanum+Gothic"; color:#52514c; text-indent:60px;
+}
+p#uiux_maintitle{
+	width:100%; color:#252525; font:italic 2.250em "바탕"; text-align:center; float:left;
+	margin-top:80px; margin-bottom:30px;
+}
+p#uiuix_text{
+	width:57%; margin:0px auto; text-align:justify; font:normal 1.000em/1.250em "Nanum+Gothic";
+}
+
+
+
+
+
+div#viewmore_wrok{
+	width:100%; height:700px; position:relative; left:0px; top:0px; float:left; background-color:white;
+}
+p#viewmore_wrok_title{
+	color:white; font:bold 5.000em "Nanum+Gothic"; text-align:center; margin-top:20%;
+}
+p#viewwork_arrow {width:50px; height:50px; margin:30px auto;}
+p#viewwork_arrow img {position:relative; -webkit-animation: arrow 0.7s linear 1s infinite alternate;
+animation: arrow 0.7s linear 1s infinite alternate;}
+@-webkit-keyframes arrow {
+    0%   {opacity: 1.0; top:15px;}
+    100% {opacity: 1.0; top:0px;}
+}
+@keyframes arrow {
+    0%   {opacity: 1.0; top:15px;}
+    100% {opacity: 1.0; top:0px;}
+}
+div#content_wrap{
+	width:100%; min-height:1520px; position:relative; left:0px; top:0px; float:left; 
+}
+div#project_information_wrap{
+	width:100%; min-height:700px; float:left; position:relative; left:0px; top:0px; 
+}
+div#project_information{
+	width:1200px; height:700px; margin:0px auto; position:relative; left:0px; top:0px; 
+}
+div#project_information_bar{
+	width:1px; height:98px; position:absolute; left:0px; top:380px; background:#eaebe5;
+}
+p#project_title{
+	width:60%; float:right; font:bold 1.000em "Nanum+Gothic"; color:#000000; letter-spacing:10px; margin-top:15px; padding-left:5%; box-sizing:border-box;
+	opacity:0;
+}
+p#project_txt{
+	width:60%; float:right; font:normal 0.875em "Nanum+Gothic"; color:#464646; margin-top:5px; padding-left:5%; box-sizing:border-box; opacity:0;
+}
+p#mobile_travelmate{
+	width:210px; height:439px; position:absolute; left:130px; top:120px; z-index:10;
+}
+div.title_area{
+	width:60%; position:absolute; right:0px; top:0px; padding-left:5%; box-sizing:border-box; margin-top:110px;	
+}
+div#titleNum00{
+	background:url("/profile/images/titleText_bg_00.png") no-repeat; background-position:30px 0px;
+}
+p.titleNum{
+	width:100%; color:#fc651e; font:bold 1.875em "Nanum+Gothic"; font-style:italic;
+}
+p.titleText{
+	width:100%; color:#010101; font:bold 2.250em "Nanum+Gothic"; margin-bottom:30px;
+}
+p.name{
+	width:15%; height:15px; float:left; margin-top:5px; 
+}
+p.substance{
+	width:85%; height:15px; float:left;  margin-top:5px; 
+}
+div#travelmateIdentity{
+	width:100%; height:530px; float:left; position:relative; left:0px; top:0px; background:#93ad02;
+	box-shadow:0px 0px 15px #dbdbdb;
+}
+h3#travelmateIdentity_title{
+	text-align:center; color:white; font:normal 2.857em "Nanum+Gothic"; letter-spacing:0.2em; margin-top:40px; font-style:italic; margin-bottom:30px;
+}
+p#travelmateIdentity_bottombg{
+	width:100%; height:50%; position:absolute; left:0px; bottom:0px; overflow:hidden;
+}
+p#travelmateIdentity_bottombg img{
+	width:100%; position:absolute; left:0px; bottom:0px; overflow:hidden;
+}
+ul#logo_list{
+	width:662px; height:128px; margin:0px auto; 
+}
+ul#logo_list>li{
+	width:128px; height:128px; float:left; background:rgba(255,255,255,0.5); border:solid 4px white; box-sizing:border-box;
+	line-height:128px; text-align:center; border-radius:64px; margin-right:50px;  font:bold 1.375em "Nanum Myeongjo"; color:#010101;
+	position:relative; left:0px; top:0px;
+}
+ul#logo_list>li>p{
+	width:128px; height:128px; position:absolute; left:0px; top:0px; line-height:128px; text-align:center;
+}
+ul#logo_list>li:last-child p{
+	line-height:150px;
+}
+ul#logo_list>li:last-child{
+	margin-right:0px;
+}
+div#proposal{
+	width:100%; height:700px; float:left; position:relative; left:0px; top:0px; border-bottom:solid 1px #b7b7b7;
+}
+p#proposal_img{
+	width:245px; height:369px; float:left; margin-left:200px; margin-top:150px;
+}
+ul.proposal_list{
+	width:800px; position:absolute; right:300px; top:80px; 
+}
+ul.proposal_list>li.proposal_title{
+	 font:bold 3.125em "Nanum+Gothic"; color:#fb641e; margin-bottom:20px;
+}
+ul.proposal_list>li.proposal_txt{
+	 font:normal 0.875em "Nanum+Gothic"; color:#252525; text-indent:15px; background:url("/profile/images/proposal_li.jpg") no-repeat 0px 3px; margin-bottom:10px;
+}
+ul#what{
+	margin-top:200px;
+}
+ul#why{
+	margin-top:400px;
+}
+div#wire_prame{
+	width:100%; height:600px; float:left; position:relative; left:0px; top:0px;
+}
+div#wire_prame_inner{
+	width:1200px; margin:0px auto; position:relative; left:0px; top:0px;
+}
+div#wire_prame_title{
+	position:absolute; left:0px; top:160px;
+}
+div#wire_prame_txt{
+	width:80%; height:125px; background:rgba(0,0,0,0.8); padding:30px; box-sizing:border-box; 
+	position:absolute; left:0px; top:280px; z-index:10; border-left:solid 8px #d65316;
+}
+div#wire_prame_txt p{
+	font:normal 0.875em "Nanum+Gothic"; color:white; text-align:justify;
+}
+ul#wire_prame_list{
+	height:500px; position:relative; right:0px; top:80px; 
+}
+ul#wire_prame_list>li{
+	position:absolute; right:0px; top:0px; 
+}
+ul#wire_prame_list_num{
+	width:100px height:20px; position:absolute; left:0px; bottom:50px; float:right; 
+}
+ul#wire_prame_list_num li{
+	width:20px; height:20px; border-radius:10px; background:#fc651e; float:left; margin-right:5px; font:normal 0.875em "Nanum+Gothic"; line-height:20px;
+}
+ul#wire_prame_list_num li:last-child{
+	margin-right:0px;
+}
+ul#wire_prame_list_num li p{
+	line-height:20px; text-align:center; color:white;
+}
+ul#wire_prame_list_num li p a{
+	line-height:20px; text-align:center; color:white;
+}
+ul#wire_prame_list_num li.clicked{
+	background:#ff9f32; width:30px; font-style:bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div#color{
+	width:100%; min-height:700px; float:left; position:relative; left:0px; top:0px; background:#f7f7f7;
+}
+div#color_inner{
+	width:1200px; height:200px; margin:0px auto;  
+}
+div.title_color{
+	height:300px; float:left; box-sizing:border-box; margin-top:110px;
+	 background:url("/profile/images/titleText_bg_01.png") no-repeat; background-position:0px 0px;	
+}
+
+
+div#yellowgreenOne{
+	width:206px; height:206px; border-radius:103px; position:absolute; left:35%; top:20%; background:rgba(147,173,2,0.6);
+	transform:scale(0,0); transition: all ease 1s;
+}
+div#yellowgreenOne p{
+	font:bold 1.000em "Nanum+Gothic"; color:white; line-height:206px; text-align:center;
+	
+}
+div#yellowgreenOne.selected{
+	transform:scale(1.2);
+}
+div#whiteOne{
+	width:270px; height:270px; border-radius:135px; position:absolute; left:45%; top:12%; background:rgba(255,255,255,0.9);
+	transform:scale(0,0); transition: all ease 1s;
+}
+div#whiteOne.selected{
+	transform:scale(1.2); 
+}
+div#whiteOne p{
+	font:bold 1.000em "Nanum+Gothic"; color:#636363; line-height:270px; text-align:center;	
+}
+div#orangeOne{
+	width:138px; height:138px; border-radius:74px; position:absolute; left:42%; top:43%; background:rgba(252,101,30,0.6); z-index:2;
+	transform:scale(0,0); transition: all ease 2s;
+}
+div#orangeOne.selected{
+	transform:scale(1.2);
+}
+div#orangeOne p{
+	font:bold 1.000em "Nanum+Gothic"; color:white; line-height:138px; text-align:center;
+}
+div#about_color{
+	width:100%; height:150px; float:left; border-top:solid 1px #e0e0e0; border-bottom:solid 1px #e0e0e0; box-sizing:border-box; background:white;
+}
+p#about_color_text{
+	width:60%; text-align:justify; position:absolute; left:50%; margin-left:-30%; bottom:100px; color:#111111;
+}
+div#coding{
+	width:100%; min-height:500px; float:left; position:relative; left:0px; top:0px;
+}
+div#coding_title{
+	width:100%; height:500px; float:left; background:url("/profile/images/coding.jpg") no-repeat fixed; position:absolute; left:0px; top:0px;
+	background-size:cover;
+}
+div#coding_title>p{
+	font:bold 2.500em "Nanum+Gothic"; color:white; text-align:center; margin-top:20px;
+}
+div#code_text{
+	width:1200px; height:330px; position:relative; left:50%; margin-left:-600px; top:0px; background:rgba(255,255,255,0.9); margin-top:100px; font:normal 1.000em/1.500em "Nanum+Gothic";
+	padding:7% 5%; box-sizing:border-box; border:solid 1px #eaebe5; text-align:justify;
+}
+div#mywork{
+	width:100%; height:330px; float:left; position:relative; left:0px; top:0px; 
+}
+div#travelmate{
+	width:40%; height:100%; float:left; position:relative; left:0px; top:0px; overflow:hidden;
+}
+div#travelmate.account{
+	/*width:100%; height:100%; padding:30px; box-sizing:border-box; background:rgba(255,255,255,0.8);
+	position:absolute; left:0px; top:0px; */
+}
+div#travelmate>img{
+	width:100%;
+}
+div#travelmate_m{
+	width:25%; height:100%; float:left; position:relative; left:0px; top:0px; overflow:hidden;
+}
+div#travelmate_m.account{
+	/*width:100%; height:100%; padding:30px; box-sizing:border-box; background:rgba(255,255,255,0.8);
+	position:absolute; left:0px; top:0px; */
+}
+div#travelmate_m>img{
+	width:100%;
+}
+div#guksim{
+	width:35%; height:100%; float:left; position:relative; left:0px; top:0px; overflow:hidden;
+}
+
+div#guksim.account{
+	/*width:100%; height:100%; padding:30px; box-sizing:border-box; background:rgba(255,255,255,0.8);
+	position:absolute; left:0px; top:0px; */
+}
+div#guksim>img{
+	width:100%;
+}
+div.work_account{
+	width:90%; height:80%;  background:rgba(255,255,255,0.8); text-align:center;
+	position:absolute; left:50%; margin-left:-45%; top:5%; padding:20px; padding-top:20%; box-sizing:border-box;
+}
+p.work_account_text{
+	
+}
+
+
+
+
+
+
+
+
+
+div#contact{
+	width:100%; height:700px; float:left; position:relative; left:0px; top:0px; background:#faf1e3; overflow:hidden;
+}
+div#contact_inner{
+	width:1200px; margin:0px auto; position:relative; left:0px; top:0px; 
+}
+p#contact_title{
+	margin-top:150px;
+}
+div#contact_content{
+	width:800px; margin:0px auto; position:relative; left:0px; top:0px; background:red; margin-top:200px;
+}
+p#contact_back{
+	width:792px; height:713px; position:absolute; left:0px; top:-270px;
+}
+p#contact_txt{
+	width:760px; height:500px; position:absolute; left:50%; margin-left:-380px; top:0px; background:white; border:solid 1px #b0091d; box-sizing:border-box; 
+}
+p#contact_front{
+	width:792px; height:460px; position:absolute; left:0px; top:0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1200px){
+	div#project_information{
+		width:100%;
+	}
+	div#p#about_color_text,div#code_text,div#wire_prame_inner{
+		width:95%;
+	}
+	p#mobile_travelmate{
+		left:5%;
+	}
+	
+	p#about_color_text{
+		width:80%;
+	}
+	ul.proposal_list{
+	width:67%; right:0px; 
+	}
+	ul#what{
+	margin-top:220px;
+	}
+	ul#why{
+		margin-top:420px;
+	}
+	p#proposal_img{
+	margin-left:20px;
+	}
+	div#code_text{
+	width:95%; left:50%; margin-left:-47.5%;
+	}
+	div#wire_prame_txt{
+	height:140px; 
+	}
+	
+	
+}
+@media screen and (max-width:980px){
+	div#travelmateIdentity{
+	height:380px;
+	}
+	p#travelmateIdentity_bottombg img{
+	position:absolute; left:0px; bottom:0px;
+	}
+	p#travelmate_pc img{
+	width:80%;
+	}
+	p#viewmore_wrok_title{
+		margin-top:50%;
+	}
+	div#code_text{
+	padding:13% 5%; 
+	}
+	p#about_color_text{
+	right:0px; margin-left:0px;
+	}
+	
+}
+@media screen and (max-width:768px){
+	body{
+		font-size:14px;
+	}
+	div#travelmateIdentity{
+	height:450px;
+	}
+	p#travelmateIdentity_bottombg{
+		display:none;
+	}
+	ul#logo_list{
+	width:306px;
+	}
+	ul#logo_list>li{
+	margin-bottom:20px;
+	}
+	ul#logo_list>li:nth-child(2n){
+	margin-right:0px;
+	}
+	p#travelmate_pc img{
+	width:60%;
+	}
+	ul#color_list{
+	width:100%; 
+	}
+	p#viewmore_wrok_title{
+	margin-top:50%;
+	}
+	div#about_color{
+	height:170px; 
+	}
+	p#proposal_img{
+	display:none;
+	}
+	ul.proposal_list{
+	width:80%;  margin-left:50%; left:-40%;
+	}
+	
+}
